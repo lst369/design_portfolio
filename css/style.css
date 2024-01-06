@@ -18,22 +18,33 @@ body {
 
 .header {
     padding: 35px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #010208;
 }
-.container {
+
+.header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header__logo {
 }
+
 .header__menu {
 }
+
 .menu__list {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 32px;
 }
+
 .menu__link:hover {
     background: var(--Primary, linear-gradient(99deg, #BC3CD8 0.07%, #C54B8C 106.32%));
     background-clip: text;
@@ -67,3 +78,79 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero__title {
+    color: var(--Neutral-2, rgba(227, 228, 230, 0.55));
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Heading 1/Light */
+    font-family: Work Sans;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 84px */
+    letter-spacing: -1.12px;
+}
+
+.hero__title span {
+    color: var(--Neutral-1, #E3E4E6);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Heading 1/Semibold */
+    font-family: Work Sans;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -1.12px;
+}
+
+.hero__arrow {
+    background: transparent url('../img/arrow.svg') center center no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 42px;
+    transform: translateX(-50%) rotate(90deg);
+    cursor: pointer;
+}
+
+.clients {
+    padding-top: 80px;
+    padding-bottom: 130px;
+}
+.container {
+}
+.clients__title {
+    color: var(--Neutral-1, #E3E4E6);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 150%;
+    max-width: 520px;
+}
+.clients__title span {
+    color: var(--Neutral-2, rgba(227, 228, 230, 0.55));
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 150%; /* 60px */
+}
+.clients__body {
+    margin-top: 95px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cienents__item {
+} 
